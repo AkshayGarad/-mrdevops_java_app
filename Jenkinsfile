@@ -15,19 +15,13 @@ pipeline{
             }
         }
 
-        stage('Git Checkout'){
+        stage('Unit Test maven'){
             steps{
                 script{
-                    gitCheckout(
-                        branch: "main",
-                        url: "https://github.com/AkshayGarad/mrdevops_java_app.git"
-                    )
-                }
+                    mvnTest()
+                }     
             }
         }
-
-        
-
 
     }
 }
