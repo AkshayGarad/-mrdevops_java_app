@@ -29,10 +29,7 @@ pipeline{
         stage('Unit Test Maven'){
             steps{
                 script{
-                    mvnTest(
-                        branch: "main",
-                        url: "https://github.com/AkshayGarad/mrdevops_java_app.git"
-                    )
+                    mvnTest()
                 }
             }
         }
