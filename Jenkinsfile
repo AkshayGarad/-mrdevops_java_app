@@ -5,7 +5,10 @@ pipeline{
         stage('Git Checkout'){
             steps{
                 script{
-                    git branch: 'main', url: 'https://github.com/AkshayGarad/mrdevops_java_app.git'
+                    gitCheckout.groovy(
+                        branch: "main"
+                        url:"https://github.com/AkshayGarad/mrdevops_java_app.git"
+                    )
                 }
             }
         }
